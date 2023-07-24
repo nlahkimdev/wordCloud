@@ -8,6 +8,8 @@ import numpy as np
 from PIL import Image
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from os import path
+import os
 
 
 def load_data():
@@ -33,7 +35,7 @@ def get_word_cloud(image, data, background_color, repeat, max_words, max_font_si
     return wordcloud
 
 
-st.title("Word Clouds based on Google Keyword and Twitter Hashtag trends")
+st.title("Word Clouds trends of 2023")
 image = st.sidebar.selectbox(label='Select Image Mask', options=[
                              'default', 'twitter', 'hashtag', 'heart'])
 
