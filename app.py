@@ -40,7 +40,7 @@ image = st.sidebar.selectbox(label='Select Image Mask', options=[
                              'default', 'twitter', 'hashtag', 'heart'])
 
 maxWords = st.sidebar.slider('Word Range', 400, 800)
-maxFontSize = st.sidebar.slider('Font Size', 10, 20)
+maxFontSize = st.sidebar.slider('Font Size', 10, 40)
 background_color = st.sidebar.selectbox(
     label='Select background color', options=['white', 'red', 'grey', 'blue'])
 repeat = st.sidebar.checkbox('repeat')
