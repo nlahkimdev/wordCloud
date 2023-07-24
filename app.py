@@ -36,6 +36,18 @@ def get_word_cloud(image, data, max_words, max_font_size):
 st.title("Word Clouds based on Google Keyword and Twitter Hashtag trends")
 image = st.sidebar.selectbox(label='Select Image Mask', options=[
                              'default', 'twitter', 'hashtag', 'heart'])
+
+
+maxFontSize = st.sidebar.slider('Font Size', 10, 20)
+background_color = st.sidebar.selectbox(
+    label='Select background color', options=['white', 'red', 'grey', 'blue'])
+repeat = st.sidebar.checkbox('repeat')
+if (repeat):
+    repeat = True
+else:
+    repeat = False
+
+
 combined_keyword, weekly_keywords, dates = load_data()
 
 
